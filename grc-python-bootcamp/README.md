@@ -52,6 +52,7 @@ That's it. Each lesson tells you exactly what to run.
 | 8 | **Cloud Config Scanner** | Detect public buckets, no-MFA admins, open ports | check-function registry, nested JSON, severity, CI gate |
 | 9 | **`grctool` CLI Toolkit** | Bundle your tools into one real command | `argparse` subparsers, **packages**, exit codes |
 | 10 | **Continuous Compliance Monitor** | Run all checks on a schedule → dashboard | **PyYAML**, `subprocess`, orchestration, scheduling |
+| 11 | **AWS Security Hub Summary** | Extract Security Hub findings → executive report | `boto3`, ASFF schema, `Counter`, lazy imports |
 
 **Suggested pace:** one lesson per sitting (45–90 min each). Do the exercises at
 the end of each lesson README before moving on — that's where the learning
@@ -70,6 +71,8 @@ sticks.
 - **After Lessons 8–10 (engineering & automation):** structure code into
   packages, build multi-command CLIs, and orchestrate everything into a
   scheduled, alert-able pipeline.
+- **Applied lessons (11+):** point the same patterns at real cloud platforms —
+  e.g. Lesson 11 extracts AWS Security Hub findings into a summary report.
 
 ## How the tools connect
 

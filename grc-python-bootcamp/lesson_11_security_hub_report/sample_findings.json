@@ -1,0 +1,114 @@
+{
+  "Findings": [
+    {
+      "Id": "arn:aws:securityhub:us-east-1:111122223333:finding/0001",
+      "AwsAccountId": "111122223333",
+      "Title": "S3 buckets should require requests to use SSL",
+      "Severity": {"Label": "MEDIUM", "Normalized": 40},
+      "Compliance": {"Status": "FAILED", "SecurityControlId": "S3.5"},
+      "Workflow": {"Status": "NEW"},
+      "RecordState": "ACTIVE",
+      "Resources": [{"Type": "AwsS3Bucket", "Id": "arn:aws:s3:::acme-public-website"}],
+      "UpdatedAt": "2026-06-08T12:00:00.000Z"
+    },
+    {
+      "Id": "arn:aws:securityhub:us-east-1:111122223333:finding/0002",
+      "AwsAccountId": "111122223333",
+      "Title": "IAM root user access key should not exist",
+      "Severity": {"Label": "CRITICAL", "Normalized": 90},
+      "Compliance": {"Status": "FAILED", "SecurityControlId": "IAM.4"},
+      "Workflow": {"Status": "NEW"},
+      "RecordState": "ACTIVE",
+      "Resources": [{"Type": "AwsIamUser", "Id": "arn:aws:iam::111122223333:root"}],
+      "UpdatedAt": "2026-06-09T09:30:00.000Z"
+    },
+    {
+      "Id": "arn:aws:securityhub:us-east-1:111122223333:finding/0003",
+      "AwsAccountId": "111122223333",
+      "Title": "MFA should be enabled for all IAM users with a console password",
+      "Severity": {"Label": "MEDIUM", "Normalized": 40},
+      "Compliance": {"Status": "FAILED", "SecurityControlId": "IAM.5"},
+      "Workflow": {"Status": "NOTIFIED"},
+      "RecordState": "ACTIVE",
+      "Resources": [{"Type": "AwsIamUser", "Id": "arn:aws:iam::111122223333:user/deploy-bot"}],
+      "UpdatedAt": "2026-06-07T15:45:00.000Z"
+    },
+    {
+      "Id": "arn:aws:securityhub:us-east-1:111122223333:finding/0004",
+      "AwsAccountId": "111122223333",
+      "Title": "Security groups should not allow ingress from 0.0.0.0/0 to port 22",
+      "Severity": {"Label": "HIGH", "Normalized": 70},
+      "Compliance": {"Status": "FAILED", "SecurityControlId": "EC2.13"},
+      "Workflow": {"Status": "NEW"},
+      "RecordState": "ACTIVE",
+      "Resources": [{"Type": "AwsEc2SecurityGroup", "Id": "arn:aws:ec2:us-east-1:111122223333:security-group/sg-ssh"}],
+      "UpdatedAt": "2026-06-09T18:10:00.000Z"
+    },
+    {
+      "Id": "arn:aws:securityhub:us-east-1:444455556666:finding/0005",
+      "AwsAccountId": "444455556666",
+      "Title": "RDS DB instances should have encryption at rest enabled",
+      "Severity": {"Label": "HIGH", "Normalized": 70},
+      "Compliance": {"Status": "FAILED", "SecurityControlId": "RDS.3"},
+      "Workflow": {"Status": "NEW"},
+      "RecordState": "ACTIVE",
+      "Resources": [{"Type": "AwsRdsDbInstance", "Id": "arn:aws:rds:us-east-1:444455556666:db/legacy-postgres"}],
+      "UpdatedAt": "2026-06-06T11:20:00.000Z"
+    },
+    {
+      "Id": "arn:aws:securityhub:us-east-1:444455556666:finding/0006",
+      "AwsAccountId": "444455556666",
+      "Title": "CloudTrail should be enabled and configured with at least one multi-region trail",
+      "Severity": {"Label": "HIGH", "Normalized": 70},
+      "Compliance": {"Status": "FAILED", "SecurityControlId": "CloudTrail.1"},
+      "Workflow": {"Status": "NEW"},
+      "RecordState": "ACTIVE",
+      "Resources": [{"Type": "AwsAccount", "Id": "AWS::::Account:444455556666"}],
+      "UpdatedAt": "2026-06-05T08:00:00.000Z"
+    },
+    {
+      "Id": "arn:aws:securityhub:us-east-1:111122223333:finding/0007",
+      "AwsAccountId": "111122223333",
+      "Title": "S3 buckets should require requests to use SSL",
+      "Severity": {"Label": "MEDIUM", "Normalized": 40},
+      "Compliance": {"Status": "FAILED", "SecurityControlId": "S3.5"},
+      "Workflow": {"Status": "NEW"},
+      "RecordState": "ACTIVE",
+      "Resources": [{"Type": "AwsS3Bucket", "Id": "arn:aws:s3:::acme-logs"}],
+      "UpdatedAt": "2026-06-08T12:05:00.000Z"
+    },
+    {
+      "Id": "arn:aws:securityhub:us-east-1:111122223333:finding/0008",
+      "AwsAccountId": "111122223333",
+      "Title": "EBS default encryption should be enabled",
+      "Severity": {"Label": "MEDIUM", "Normalized": 40},
+      "Compliance": {"Status": "PASSED", "SecurityControlId": "EC2.7"},
+      "Workflow": {"Status": "RESOLVED"},
+      "RecordState": "ACTIVE",
+      "Resources": [{"Type": "AwsAccount", "Id": "AWS::::Account:111122223333"}],
+      "UpdatedAt": "2026-06-04T10:00:00.000Z"
+    },
+    {
+      "Id": "arn:aws:securityhub:us-east-1:444455556666:finding/0009",
+      "AwsAccountId": "444455556666",
+      "Title": "GuardDuty should be enabled",
+      "Severity": {"Label": "HIGH", "Normalized": 70},
+      "Compliance": {"Status": "PASSED", "SecurityControlId": "GuardDuty.1"},
+      "Workflow": {"Status": "RESOLVED"},
+      "RecordState": "ACTIVE",
+      "Resources": [{"Type": "AwsAccount", "Id": "AWS::::Account:444455556666"}],
+      "UpdatedAt": "2026-06-03T14:30:00.000Z"
+    },
+    {
+      "Id": "arn:aws:securityhub:us-east-1:111122223333:finding/0010",
+      "AwsAccountId": "111122223333",
+      "Title": "Lambda functions should use supported runtimes",
+      "Severity": {"Label": "LOW", "Normalized": 10},
+      "Compliance": {"Status": "FAILED", "SecurityControlId": "Lambda.2"},
+      "Workflow": {"Status": "SUPPRESSED"},
+      "RecordState": "ACTIVE",
+      "Resources": [{"Type": "AwsLambdaFunction", "Id": "arn:aws:lambda:us-east-1:111122223333:function:legacy-cron"}],
+      "UpdatedAt": "2026-06-02T16:00:00.000Z"
+    }
+  ]
+}
