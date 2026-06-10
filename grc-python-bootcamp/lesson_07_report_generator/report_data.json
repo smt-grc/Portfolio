@@ -1,0 +1,21 @@
+{
+  "organization": "Acme Corp",
+  "period": "Q2 2026",
+  "prepared_by": "GRC Team",
+  "frameworks": ["SOC 2 Type II", "ISO 27001:2022"],
+  "controls": [
+    {"id": "AC-01", "name": "Unique user IDs and authentication", "owner": "IT", "status": "Operating"},
+    {"id": "AC-02", "name": "MFA for privileged access", "owner": "IT", "status": "Operating"},
+    {"id": "AC-03", "name": "Quarterly user access reviews", "owner": "Security", "status": "Deficient"},
+    {"id": "CM-01", "name": "Change management and approval", "owner": "Engineering", "status": "Operating"},
+    {"id": "VM-01", "name": "Vulnerability scanning and remediation", "owner": "Security", "status": "Operating"},
+    {"id": "BC-01", "name": "Backups and restoration testing", "owner": "IT", "status": "Not Tested"},
+    {"id": "IR-01", "name": "Incident response plan and testing", "owner": "Security", "status": "Deficient"}
+  ],
+  "top_risks": [
+    {"risk_id": "R-003", "description": "Customer PII stored unencrypted in legacy DB", "residual_band": "Critical"},
+    {"risk_id": "R-001", "description": "Orphaned privileged accounts after offboarding", "residual_band": "High"},
+    {"risk_id": "R-008", "description": "Shared admin credentials for network gear", "residual_band": "High"}
+  ],
+  "evidence_summary": {"overdue": 1, "due_soon": 2, "ok": 5}
+}

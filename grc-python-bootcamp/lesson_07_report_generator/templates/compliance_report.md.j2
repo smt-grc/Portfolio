@@ -1,0 +1,52 @@
+# Compliance Status Report — {{ organization }}
+
+**Reporting period:** {{ period }}
+**Prepared by:** {{ prepared_by }}
+**Frameworks in scope:** {{ frameworks | join(", ") }}
+**Generated:** {{ generated_on }}
+
+---
+
+## 1. Control Status Summary
+
+Total controls: {{ controls | length }}
+{% set operating = controls | selectattr("status", "equalto", "Operating") | list -%}
+- Operating: {{ operating | length }}
+- Deficient: {{ controls | selectattr("status", "equalto", "Deficient") | list | length }}
+- Not Tested: {{ controls | selectattr("status", "equalto", "Not Tested") | list | length }}
+
+| Control | Name | Owner | Status |
+|---------|------|-------|--------|
+{% for c in controls -%}
+| {{ c.id }} | {{ c.name }} | {{ c.owner }} | {{ c.status }} |
+{% endfor %}
+
+{% set issues = controls | rejectattr("status", "equalto", "Operating") | list -%}
+{% if issues -%}
+### Controls requiring attention
+{% for c in issues -%}
+- **{{ c.id }} ({{ c.status }})** — {{ c.name }} _(owner: {{ c.owner }})_
+{% endfor %}
+{%- else -%}
+All controls are operating effectively.
+{%- endif %}
+
+## 2. Top Residual Risks
+
+{% for r in top_risks -%}
+{{ loop.index }}. **[{{ r.residual_band }}]** {{ r.risk_id }} — {{ r.description }}
+{% endfor %}
+
+## 3. Evidence Freshness
+
+- Overdue: {{ evidence_summary.overdue }}
+- Due soon: {{ evidence_summary.due_soon }}
+- Up to date: {{ evidence_summary.ok }}
+
+{% if evidence_summary.overdue > 0 -%}
+> ACTION REQUIRED: {{ evidence_summary.overdue }} evidence item(s) are overdue and must be collected before the audit window.
+{%- endif %}
+
+---
+_This report was generated automatically from `report_data.json`. Re-run the
+generator after each control test to keep it current._

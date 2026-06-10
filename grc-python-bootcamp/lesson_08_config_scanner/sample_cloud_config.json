@@ -1,0 +1,21 @@
+{
+  "account_id": "123456789012",
+  "s3_buckets": [
+    {"name": "acme-public-website", "public": true, "encryption": "AES256", "versioning": true},
+    {"name": "acme-customer-data", "public": true, "encryption": "none", "versioning": false},
+    {"name": "acme-backups", "public": false, "encryption": "aws:kms", "versioning": true},
+    {"name": "acme-logs", "public": false, "encryption": "none", "versioning": false}
+  ],
+  "iam_users": [
+    {"username": "root", "mfa_enabled": false, "access_keys": 1, "admin": true},
+    {"username": "deploy-bot", "mfa_enabled": false, "access_keys": 2, "admin": true},
+    {"username": "analyst-jane", "mfa_enabled": true, "access_keys": 0, "admin": false},
+    {"username": "admin-sam", "mfa_enabled": true, "access_keys": 1, "admin": true}
+  ],
+  "security_groups": [
+    {"id": "sg-web", "open_ports": [80, 443], "source": "0.0.0.0/0"},
+    {"id": "sg-ssh", "open_ports": [22], "source": "0.0.0.0/0"},
+    {"id": "sg-db", "open_ports": [5432], "source": "10.0.0.0/16"},
+    {"id": "sg-rdp", "open_ports": [3389], "source": "0.0.0.0/0"}
+  ]
+}

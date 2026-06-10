@@ -1,0 +1,72 @@
+{
+  "vulnerabilities": [
+    {
+      "cve": {
+        "id": "CVE-2021-44228",
+        "published": "2021-12-10T10:15:00.000",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "Apache Log4j2 JNDI features do not protect against attacker controlled LDAP and other JNDI related endpoints (Log4Shell), allowing remote code execution."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV31": [
+            {"cvssData": {"baseScore": 10.0, "baseSeverity": "CRITICAL"}}
+          ]
+        }
+      }
+    },
+    {
+      "cve": {
+        "id": "CVE-2014-0160",
+        "published": "2014-04-07T22:55:00.000",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "The TLS heartbeat extension in OpenSSL (Heartbleed) allows remote attackers to read process memory and obtain sensitive information."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV31": [
+            {"cvssData": {"baseScore": 7.5, "baseSeverity": "HIGH"}}
+          ]
+        }
+      }
+    },
+    {
+      "cve": {
+        "id": "CVE-2022-37434",
+        "published": "2022-08-05T07:15:00.000",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "zlib through 1.2.12 has a heap-based buffer over-read or buffer overflow in inflate via a large gzip header extra field."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV31": [
+            {"cvssData": {"baseScore": 9.8, "baseSeverity": "CRITICAL"}}
+          ]
+        }
+      }
+    },
+    {
+      "cve": {
+        "id": "CVE-2020-1971",
+        "published": "2020-12-08T16:15:00.000",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "The X.509 GeneralName comparison in OpenSSL can be misused, leading to a NULL pointer dereference and denial of service."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV31": [
+            {"cvssData": {"baseScore": 5.9, "baseSeverity": "MEDIUM"}}
+          ]
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+venv/
+env/
+
+# Generated artifacts from running the tools (regenerate any time)
+findings.csv
+findings.json
+scored_risks.csv
+report.md
+dashboard.md
+results.json
+summary.json
+monitor.log
+
+# Editor / OS
+.vscode/
+.idea/
+.DS_Store

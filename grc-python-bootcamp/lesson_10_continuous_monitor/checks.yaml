@@ -1,0 +1,25 @@
+# Continuous compliance check definitions.
+# Each check runs a command in a working directory (relative to --base-dir,
+# which defaults to the bootcamp root). A check PASSES if its command exits 0
+# and FAILS otherwise - so tools that exit non-zero on a problem (Lessons 5, 8,
+# and the access-review subcommand) will surface as failing controls here.
+checks:
+  - name: Password policy enforcement
+    control: CC6.1
+    cwd: lesson_01_password_policy
+    cmd: python password_policy_checker.py --file sample_passwords.txt
+
+  - name: Evidence freshness (no overdue)
+    control: CC1.4
+    cwd: lesson_05_evidence_tracker
+    cmd: python evidence_tracker.py --today 2026-06-10 --fail-on-overdue
+
+  - name: Cloud config baseline (no CRITICAL)
+    control: CC6.6
+    cwd: lesson_08_config_scanner
+    cmd: python config_scanner.py --fail-on CRITICAL
+
+  - name: User access review (no flagged accounts)
+    control: CC6.2
+    cwd: lesson_09_cli_toolkit
+    cmd: python grctool.py access-review --file ../lesson_02_access_review/sample_users.csv --today 2026-06-10

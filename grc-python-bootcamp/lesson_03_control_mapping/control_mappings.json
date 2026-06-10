@@ -1,0 +1,74 @@
+{
+  "controls": [
+    {
+      "id": "AC-01",
+      "name": "Unique user IDs and authentication",
+      "owner": "IT",
+      "frameworks": {
+        "SOC2": ["CC6.1"],
+        "ISO27001": ["A.5.16", "A.5.17"],
+        "NIST_CSF": ["PR.AC-1"]
+      }
+    },
+    {
+      "id": "AC-02",
+      "name": "Multi-factor authentication for privileged access",
+      "owner": "IT",
+      "frameworks": {
+        "SOC2": ["CC6.1"],
+        "ISO27001": ["A.5.17"],
+        "NIST_CSF": ["PR.AC-7"]
+      }
+    },
+    {
+      "id": "AC-03",
+      "name": "Quarterly user access reviews",
+      "owner": "Security",
+      "frameworks": {
+        "SOC2": ["CC6.2", "CC6.3"],
+        "ISO27001": ["A.5.18"],
+        "NIST_CSF": ["PR.AC-4"]
+      }
+    },
+    {
+      "id": "CM-01",
+      "name": "Change management and approval",
+      "owner": "Engineering",
+      "frameworks": {
+        "SOC2": ["CC8.1"],
+        "ISO27001": ["A.8.32"],
+        "NIST_CSF": ["PR.IP-3"]
+      }
+    },
+    {
+      "id": "VM-01",
+      "name": "Vulnerability scanning and remediation",
+      "owner": "Security",
+      "frameworks": {
+        "SOC2": ["CC7.1"],
+        "ISO27001": ["A.8.8"],
+        "NIST_CSF": ["ID.RA-1", "PR.IP-12"]
+      }
+    },
+    {
+      "id": "BC-01",
+      "name": "Backups and restoration testing",
+      "owner": "IT",
+      "frameworks": {
+        "SOC2": ["A1.2"],
+        "ISO27001": ["A.8.13"],
+        "NIST_CSF": ["PR.IP-4"]
+      }
+    },
+    {
+      "id": "IR-01",
+      "name": "Incident response plan and testing",
+      "owner": "Security",
+      "frameworks": {
+        "SOC2": ["CC7.3", "CC7.4"],
+        "ISO27001": ["A.5.24", "A.5.26"],
+        "NIST_CSF": ["RS.RP-1"]
+      }
+    }
+  ]
+}

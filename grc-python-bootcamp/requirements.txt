@@ -1,0 +1,8 @@
+# Dependencies for the GRC Python Bootcamp.
+# Lessons 1-5 and 8-9 use only the Python standard library (no installs needed).
+# Lessons 4, 6, 7, and 10 introduce one well-known library each:
+requests>=2.31    # Lesson 4  - calling the NVD REST API
+pandas>=2.0       # Lesson 6  - risk register analytics
+jinja2>=3.1       # Lesson 7  - report templating
+pyyaml>=6.0       # Lesson 10 - reading the monitor's checks.yaml
+boto3>=1.28       # Lesson 11 - live AWS Security Hub queries (offline mode needs no AWS)
