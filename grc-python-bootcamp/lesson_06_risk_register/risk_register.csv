@@ -1,0 +1,11 @@
+risk_id,category,description,likelihood,impact,residual_likelihood,residual_impact,owner
+R-001,Access,Orphaned privileged accounts after offboarding,4,5,2,5,Security
+R-002,Vendor,Critical SaaS vendor has no SOC 2 report,3,4,3,4,Procurement
+R-003,Data,Customer PII stored unencrypted in legacy DB,3,5,1,5,Engineering
+R-004,Availability,No tested disaster recovery for primary region,2,5,2,4,IT
+R-005,Change,Production changes deployed without approval,4,3,2,3,Engineering
+R-006,Endpoint,Laptops without disk encryption,3,4,1,4,IT
+R-007,Vendor,Subprocessor list not reviewed annually,2,3,2,3,Legal
+R-008,Access,Shared admin credentials for network gear,4,4,2,4,IT
+R-009,Data,Backups not encrypted at rest,2,4,1,4,IT
+R-010,Phishing,No recurring security awareness training,4,3,2,3,Security

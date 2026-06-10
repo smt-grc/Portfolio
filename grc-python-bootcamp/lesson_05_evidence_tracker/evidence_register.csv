@@ -1,0 +1,9 @@
+evidence_id,control,description,owner,last_collected,frequency_days
+EV-001,AC-03,Quarterly user access review export,Security,2026-03-01,90
+EV-002,VM-01,Monthly vulnerability scan report,Security,2026-05-20,30
+EV-003,CM-01,Change tickets sample with approvals,Engineering,2026-04-15,90
+EV-004,BC-01,Backup restoration test results,IT,2025-12-10,180
+EV-005,IR-01,Incident response tabletop minutes,Security,2025-06-01,365
+EV-006,AC-02,MFA enrollment report,IT,2026-06-05,30
+EV-007,VM-01,Penetration test report,Security,2025-09-01,365
+EV-008,AC-01,Identity provider config screenshot,IT,2026-06-08,180

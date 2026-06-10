@@ -1,0 +1,11 @@
+username,department,status,privileged,mfa_enabled,last_login
+amartin,Engineering,active,true,true,2026-06-01
+bchen,Finance,active,false,true,2026-05-28
+cjones,Sales,terminated,false,false,2026-01-15
+dlopez,IT,active,true,false,2026-06-05
+ekim,Marketing,active,false,false,2025-11-02
+fgarcia,Engineering,disabled,true,true,2026-02-20
+hwong,Support,active,false,true,
+iperez,Finance,active,true,true,2026-06-08
+jsingh,IT,inactive,true,false,2025-09-10
+kbrown,Sales,active,false,true,2026-06-09
